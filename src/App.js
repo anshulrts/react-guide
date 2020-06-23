@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      <Person />
-      <Person />
-      <Person />
+      <Person name="Anshul" age="27" />
+      <Person name="Kamal" age="26" >My hobbies: Reading</Person>
+      <Person name="Varun" age="25" />
     </div>
   );
 }
