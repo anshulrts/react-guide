@@ -22,14 +22,21 @@ class App extends Component {
     })
   }
 
-  nameChanged = (event) => {
-    this.setState({
-      persons: [
-        {name: "Anshul", age:27},
-        {name: event.target.value, age:28},
-        {name: "Varun", age:25}
-      ]
+  nameChanged = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id == id;
     });
+    
+    const person = {...this.state.persons[personIndex]};
+    
+    //Instead of Object Destructuring, we can use below mentioned approach also
+    //const person = Object.assign({}, this.state.persons[personIndex]);
+    
+    person.name = event.target.value;
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+    
+    this.setState({persons: persons});
   }
 
   togglePersons = () => {
@@ -65,6 +72,7 @@ class App extends Component {
               name={person.name}
               age={person.age}
               key={person.id}
+              changed={(event) => this.nameChanged(event, person.id)}
               />
           })
         }
