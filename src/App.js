@@ -5,9 +5,9 @@ import Person from './Person/Person'
 class App extends Component {
   state = {
     persons: [
-      {name:"Anshul", age:27},
-      {name:"Kamal", age:28},
-      {name:"Varun", age:25}
+      {id:'sdaf', name:"Anshul", age:27},
+      {id:'qer', name:"Kamal", age:28},
+      {id:'xcvz', name:"Varun", age:25}
     ],
     showPersons: false
   };
@@ -64,6 +64,7 @@ class App extends Component {
               click={() => this.deletePersonHandler(index)}
               name={person.name}
               age={person.age}
+              key={person.id}
               />
           })
         }
