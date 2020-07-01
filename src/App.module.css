@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.check1 {
+  background-color: green;
+  color: white;
+  font: inherit;
+  border: 1px solic blue;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.check1:hover {
+background-color: lightgreen;
+color: black;
+}
