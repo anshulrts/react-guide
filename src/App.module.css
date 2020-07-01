@@ -20,6 +20,14 @@
 }
 
 .check1:hover {
-background-color: lightgreen;
-color: black;
+  background-color: lightgreen;
+  color: black;
+}
+
+.check1.Red {
+  background-color: red;
+}
+
+.check1.Red:hover {
+  background-color: salmon;
 }
